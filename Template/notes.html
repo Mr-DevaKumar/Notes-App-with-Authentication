@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Notes</title>
+</head>
+
+<body>
+    <h1>Your Notes</h1>
+
+    <!-- Form to add a new note -->
+    <form action="{{ url_for('add_note') }}" method="POST">
+        <textarea name="note_content" placeholder="Write your note here..." required></textarea>
+        <button type="submit">Add Note</button>
+    </form>
+
+    <!-- Display notes -->
+    <ul>
+        {% for note in notes %}
+        <li>{{ note.note_content }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>
