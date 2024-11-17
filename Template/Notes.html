@@ -132,27 +132,30 @@
 
   <!-- custom menu -->
 
+  <!-- Notes Section -->
+  <section class="notes_section">
+    <div class="container">
+      <h2 class="custom_heading">Your Notes</h2>
 
-  <!-- Login Section -->
-  <section class="login_section">
-    <img src="images/ban.jpg">
-    <div class="login_container">
-      <div class="login_box">
-        <h2 class="custom_heading">Login</h2>
-        <form action="#" method="post">
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-          </div>
-          <button type="submit" class="btn login_btn">Login</button>
-          <p class="text-center mt-3">
-            Don't have an account? <a href="signup.html">Sign Up</a>
-          </p>
-        </form>
+      <!-- Note Input Form -->
+      <form method="POST" action="{{ url_for('add_note') }}">
+        <div class="note_input">
+          <textarea name="note_content" placeholder="Write your note here..." required></textarea>
+          <button type="submit" class="btn btn-primary">Add Note</button>
+        </div>
+      </form>
+
+      <!-- Notes List -->
+      <div class="notes_list">
+        <ul>
+          {% for note in notes %}
+          <li class="note_item">
+            <p>{{ note.note_content }}</p>
+          </li>
+          {% empty %}
+          <p>No notes yet.</p>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </section>
@@ -169,12 +172,12 @@
               Navigation
             </h4>
             <ul>
-              <li class="active">
+              <li>
                 <a href="index.html">
                   Home
                 </a>
               </li>
-              <li>
+              <li class="active">
                 <a href="about.html">
                   About
                 </a>

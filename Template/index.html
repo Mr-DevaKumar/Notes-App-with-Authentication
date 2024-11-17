@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>InkVault</title>
+
+  <!-- Icon for the webpage-->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/Ink Vault Logo.png') }}" />
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700|Roboto:400,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+  <!-- Responsive style -->
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='images/logo main.png') }}" alt="InkVault Logo" />
+            <span style="font-size: 24px; font-family: 'Merriweather', serif; color: #5A4D83;">
+              InkVault
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-2">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('about') }}">About </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('service') }}">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact us</a>
+              </li>
+            </ul>
+            <div class="user_option">
+              <div class="login_btn-container">
+                <a href="{{ url_for('login') }}">
+                  Login
+                </a>
+              </div>
+              <form class="form-inline my-2 my-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <section class="slider_section">
+      <div class="container-fluid">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-3 col-lg-2 offset-md-2">
+                  <div class="detail-box">
+                    <h1>
+                      Personalize Your Notes
+                    </h1>
+                    <p>
+                      Securely store and manage your message with ease!
+                    </p>
+                    <div>
+                      <a href="{{ url_for('login') }}">
+                        Login
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 col-lg-8">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='images/banner.png') }}" alt="Banner Image" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div><br>
+
+  <!-- custom menu -->
+  <div class="custom_menu-container">
+    <div class="container">
+      <div class="custom_menu">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link pl-0" href="{{ url_for('home') }}">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}">About </a>
+          </li>
+          <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('service') }}">Services</a>
+          </li>
+          <a class="nav-link" href="{{ url_for('contact') }}">Contact us</a>
+          </li>
+        </ul>
+        <div class="user_option">
+          <div class="login_btn-container">
+            <a href="{{ url_for('login') }}">
+              Login
+            </a>
+          </div>
+          <form class="form-inline my-2 my-lg-0">
+            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- custom menu -->
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/about.png') }}" alt="About Image" />
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="detail-box">
+            <div class="custom_heading-container">
+              <h2>
+                About InkVault
+              </h2>
+            </div>
+
+            <p style="text-align: justify;">
+              &nbsp;&nbsp;&nbsp;&nbsp;Welcome to InkVault – your secure and organized space for capturing thoughts,
+              ideas, and personal notes.
+              At InkVault, we believe in empowering your thoughts and ideas through seamless note-taking. Our platform
+              is designed to help you capture, organize, and safeguard your notes with ease and style. We’re dedicated
+              to providing a secure and user-friendly experience, so you can focus on what truly matters.
+            </p>
+            <div>
+              <a href="{{ url_for('about') }}">
+                More About Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- do section -->
+  <section class="do_section layout_padding-bottom">
+    <div class="container">
+      <div class="custom_heading-container">
+        <h2>
+          What we do
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="content-box bg-red">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/Secure.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h6>
+                Secure Note Storage
+              </h6>
+              <p>
+                Your notes, safely encrypted and accessible only to you.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="content-box bg-green">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/controller.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h6>
+                Personalized Organization
+              </h6>
+              <p>
+                Tag and categorize notes for quick access.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="content-box bg-red">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/monitor.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h6>
+                Instant Access Anytime
+              </h6>
+              <p>
+                Log in anytime, on any device.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="content-box bg-green">
+            <div class="img-box">
+              <img src="{{ url_for('static', filename='images/EffortlessFileManagement.png') }}" alt="" />
+            </div>
+            <div class="detail-box">
+              <h6>
+                Effortless Note Management
+              </h6>
+              <p>
+                Create, edit, and delete notes with ease.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end do section -->
+
+  <!-- contact section -->
+
+  <section class="contact_section ">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-2 col-md-5 offset-md-1">
+          <h2 class="custom_heading">Contact Us</h2>
+          <form action="{{ url_for('contact') }}" method="POST">
+            <div>
+              <input type="text" placeholder="Name" />
+            </div>
+            <div>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div>
+              <input type="text" placeholder="Pone Number" />
+            </div>
+            <div>
+              <input type="text" class="message-box" placeholder="Message" />
+            </div>
+            <div class="d-flex  mt-4 ">
+              <button>
+                SEND
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/contact.jpg') }}" alt="" class="w-100" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding-top layout_padding2-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="info_links pl-lg-5">
+            <h4>
+              Navigation
+            </h4>
+            <ul>
+              <li class="active">
+                <a href="{{ url_for('home') }}">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="{{ url_for('about') }}">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="{{ url_for('contact') }}">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="info_contact">
+            <h4>
+              Location
+            </h4>
+            <div>
+              <img src="{{ url_for('static', filename='images/location.jpg') }}" alt="" />
+              <p>
+                India
+              </p>
+            </div>
+            <div>
+              <img src="{{ url_for('static', filename='images/telephone.jpg') }}" alt="" />
+              <p>
+                +91 8667660065
+              </p>
+            </div>
+            <div>
+              <img src="{{ url_for('static', filename='images/envelope.jpg') }}" alt="" />
+              <p>
+                deva29008@gmail.com
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="info_social">
+            <h4>
+              Social Link
+            </h4>
+            <div class="social_container">
+              <div>
+                <a href="">
+                  <img src="{{ url_for('static', filename='images/facebook-logo.jpg') }}" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <img src="{{ url_for('static', filename='images/twitter-logo.jpg') }}" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <img src="{{ url_for('static', filename='images/instagram.jpg') }}" alt="" />
+                </a>
+              </div>
+              <div>
+                <a href="">
+                  <img src="{{ url_for('static', filename='images/linkedin-sign.jpg') }}" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <p>
+      &copy; 2024 All Rights Reserved By
+      <a href="{{ url_for('home') }}">InkVault</a>
+    </p>
+  </footer>
+  <!-- footer section -->
+
+  <script src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/circles.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+
+</body>
+
+</html>
